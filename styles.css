@@ -1,3 +1,10 @@
 html {
     background-color: black;
 }
+
+h1,
+h2,
+ul,
+li {
+    color: white;
+}
