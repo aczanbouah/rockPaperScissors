@@ -55,4 +55,9 @@ function game() {
         console.log(`Your score: ${playerScore}`)
         console.log(`Computer score: ${computerScore}`)
     }
+    if (playerScore === 5) {
+        console.log("Congratulations! You won.")
+    } else if (computerScore === 5) {
+        console.log("Tough luck! You lost.")
+    }
 }
