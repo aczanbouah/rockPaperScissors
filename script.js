@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function computerPlay() {
     const computerNum = Math.floor(Math.random() * 3) + 1;
     let computerSelection = "";
@@ -12,32 +15,44 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    function playerWins() {
+        playerScore++;
+        return console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+    }
+
+    function computerWins() {
+        computerScore++;
+        return console.log(`You lose! ${playerSelection} gets beat by ${computerSelection}.`);
+    }
     if (playerSelection === computerSelection) {
-        return "Draw";
+        return console.log("Draw");
     } else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
-            return `You lose! Paper beats rock.`;
+            return computerWins();
         } else if (computerSelection === "scissors") {
-            return `You win! Rock beats scissors.`;
+            return playerWins();
         }
     } else if (playerSelection === "paper") {
         if (computerSelection === "rock") {
-            return `You win! Paper beats rock.`
+            return playerWins();
         } else if (computerSelection === "scissors") {
-            return `You lose! Scissors beats paper.`
+            return computerWins();
         }
     } else if (playerSelection === "scissors") {
         if (computerSelection === "rock") {
-            return `You lose! Rock beats scissors.`
+            return computerWins();
         } else if (computerSelection === "paper") {
-            return `You win! Scissors beats paper.`
+            return playerWins();
         }
     }
 }
 
 function game() {
-    const playerSelection = prompt("Enter your choice").toLowerCase();
-    const computerSelection = computerPlay();
-
-
+    while (playerScore !== 5 && computerScore !== 5) {
+        const playerSelection = prompt("Enter your choice").toLowerCase();
+        const computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+        console.log(`Your score: ${playerScore}`)
+        console.log(`Computer score: ${computerScore}`)
+    }
 }
