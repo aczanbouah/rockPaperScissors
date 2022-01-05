@@ -53,12 +53,18 @@ function game() {
         const playerSelection = playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
         const computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
-        console.log(`Your score: ${playerScore}`)
-        console.log(`Computer score: ${computerScore}`)
+        console.log(`Your score: ${playerScore}`);
+        console.log(`Computer score: ${computerScore}`);
     }
     if (playerScore === 5) {
-        console.log("Congratulations! You won.")
+        console.log("Congratulations! You won.");
     } else if (computerScore === 5) {
-        console.log("Tough luck! You lost.")
+        console.log("Tough luck! You lost.");
     }
+}
+
+function newGame() {
+    playerScore = 0;
+    computerScore = 0;
+    game();
 }
