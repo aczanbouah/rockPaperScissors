@@ -5,11 +5,11 @@ function computerPlay() {
     const computerNum = Math.floor(Math.random() * 3) + 1;
     let computerSelection = "";
     if (computerNum === 1) {
-        computerSelection = "rock";
+        computerSelection = "Rock";
     } else if (computerNum === 2) {
-        computerSelection = "paper";
+        computerSelection = "Paper";
     } else if (computerNum === 3) {
-        computerSelection = "scissors"
+        computerSelection = "Scissors"
     }
     return computerSelection;
 }
@@ -26,22 +26,22 @@ function playRound(playerSelection, computerSelection) {
     }
     if (playerSelection === computerSelection) {
         return console.log("Draw");
-    } else if (playerSelection === "rock") {
-        if (computerSelection === "paper") {
+    } else if (playerSelection === "Rock") {
+        if (computerSelection === "Paper") {
             return computerWins();
-        } else if (computerSelection === "scissors") {
+        } else if (computerSelection === "Scissors") {
             return playerWins();
         }
-    } else if (playerSelection === "paper") {
-        if (computerSelection === "rock") {
+    } else if (playerSelection === "Paper") {
+        if (computerSelection === "Rock") {
             return playerWins();
-        } else if (computerSelection === "scissors") {
+        } else if (computerSelection === "Scissors") {
             return computerWins();
         }
-    } else if (playerSelection === "scissors") {
-        if (computerSelection === "rock") {
+    } else if (playerSelection === "Scissors") {
+        if (computerSelection === "Rock") {
             return computerWins();
-        } else if (computerSelection === "paper") {
+        } else if (computerSelection === "Paper") {
             return playerWins();
         }
     }
@@ -49,7 +49,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     while (playerScore !== 5 && computerScore !== 5) {
-        const playerSelection = prompt("Enter your choice").toLowerCase();
+        const playerInput = prompt("Enter your choice").toLowerCase();
+        const playerSelection = playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
         const computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
         console.log(`Your score: ${playerScore}`)
