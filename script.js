@@ -1,6 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
+
 function computerPlay() {
     const computerNum = Math.floor(Math.random() * 3) + 1;
     let computerSelection;
@@ -15,17 +17,23 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    const roundResult = document.querySelector('#result')
+
     function playerWins() {
         playerScore++;
-        return console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+        return roundResult.innerText = `You win! ${playerSelection} beats ${computerSelection}.`
+        // return console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+
     }
 
     function computerWins() {
         computerScore++;
-        return console.log(`You lose! ${playerSelection} gets beat by ${computerSelection}.`);
+        return roundResult.innerText = `You lose! ${playerSelection} gets beat by ${computerSelection}.`
+        // return console.log(`You lose! ${playerSelection} gets beat by ${computerSelection}.`);
+
     }
     if (playerSelection === computerSelection) {
-        return console.log("Draw");
+        return roundResult.innerText = 'Draw!'
     } else if (playerSelection === "Rock") {
         if (computerSelection === "Paper") {
             return computerWins();
@@ -45,6 +53,10 @@ function playRound(playerSelection, computerSelection) {
             return playerWins();
         }
     }
+    const playerScoreCounter = document.querySelector('#playerScoreCount');
+    const computerScoreCounter = document.querySelector('#computerScoreCount');
+    playerScoreCounter.innerText = `${playerScore}`;
+    computerScoreCounter.innerText = `${computerScore}`;
 }
 
 function game() {
@@ -61,6 +73,7 @@ function game() {
     } else if (computerScore === 5) {
         console.log("Tough luck! You lost.");
     }
+
 }
 
 function newGame() {
