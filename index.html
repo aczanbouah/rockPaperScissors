@@ -14,41 +14,44 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Rock Paper Scissors</h1>
     </header>
-    <section>
-      <div>
+    <section class="scoreContainer">
+      <div class="score">
         <h2>Player score</h2>
         <p>0</p>
       </div>
-      <div>
+      <div class="score">
         <h2>Computer score</h2>
         <p>0</p>
       </div>
     </section>
-    <section>
-      <img src="img/rock.png" alt="rock" />
-      <img src="img/paper.png" alt="paper" />
-      <img src="img/scissors.png" alt="scissors" />
+    <div class="resultContainer">
+      <p>end result placeholder</p>
+    </div>
+    <section class="rpsContainer">
+      <img src="img/rock.png" alt="rock" id="rock" />
+      <img src="img/paper.png" alt="paper" id="paper" />
+      <img src="img/scissors.png" alt="scissors" id="scissors" />
     </section>
-    <section>
-      <div>
+    <section class="selectionContainer">
+      <div class="selection">
         <h2>Player selection</h2>
         <p>placeholder</p>
       </div>
-      <div>
+      <div class="selection">
         <h2>Computer Selection</h2>
         <p>placeholder</p>
       </div>
     </section>
-    <section>
+    <section class="result">
       <p>result placeholder</p>
     </section>
-    <section>
+    <section class="newGame">
       <button>New game</button>
     </section>
-    <footer>footer placeholder</footer>
+    <footer class="footer">footer placeholder</footer>
     <script src="script.js"></script>
   </body>
 </html>

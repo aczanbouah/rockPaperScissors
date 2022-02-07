@@ -1,3 +1,52 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #ffdf00;
+}
+
+.header {
+    text-align: center;
+}
+
+.scoreContainer,
+.selectionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.resultContainer,
+.result,
+.newGame {
+    text-align: center;
+}
+
+.score,
+.selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rpsContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.rpsContainer>img {
+    width: 200px;
+    height: auto;
+    padding: 24px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
