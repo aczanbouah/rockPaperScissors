@@ -3,7 +3,7 @@ let computerScore = 0;
 
 function computerPlay() {
     const computerNum = Math.floor(Math.random() * 3) + 1;
-    let computerSelection = "";
+    let computerSelection;
     if (computerNum === 1) {
         computerSelection = "Rock";
     } else if (computerNum === 2) {
@@ -29,19 +29,19 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "Rock") {
         if (computerSelection === "Paper") {
             return computerWins();
-        } else if (computerSelection === "Scissors") {
+        } else {
             return playerWins();
         }
     } else if (playerSelection === "Paper") {
         if (computerSelection === "Rock") {
             return playerWins();
-        } else if (computerSelection === "Scissors") {
+        } else {
             return computerWins();
         }
     } else if (playerSelection === "Scissors") {
         if (computerSelection === "Rock") {
             return computerWins();
-        } else if (computerSelection === "Paper") {
+        } else {
             return playerWins();
         }
     }
