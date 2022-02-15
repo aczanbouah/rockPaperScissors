@@ -15,43 +15,50 @@
   </head>
   <body>
     <header class="header">
-      <h1>Rock Paper Scissors</h1>
+      <h1 id="headerText">Rock Paper Scissors</h1>
     </header>
-    <section class="scoreContainer">
-      <div class="score">
-        <h2>Player score</h2>
-        <p id="playerScoreCount"></p>
+    <div class="gameContainer">
+      <section class="scoreContainer">
+        <div class="score">
+          <h2>Player score</h2>
+          <p id="playerScoreCount"></p>
+        </div>
+        <div class="score">
+          <h2>Computer score</h2>
+          <p id="computerScoreCount"></p>
+        </div>
+      </section>
+      <div class="endResultContainer">
+        <p id="endResultText"></p>
       </div>
-      <div class="score">
-        <h2>Computer score</h2>
-        <p id="computerScoreCount"></p>
-      </div>
-    </section>
-    <div class="endResultContainer">
-      <p>end result placeholder</p>
+      <section class="rpsContainer">
+        <img src="img/rock.png" alt="rock" id="rock" />
+        <img src="img/paper.png" alt="paper" id="paper" />
+        <img src="img/scissors.png" alt="scissors" id="scissors" />
+      </section>
+      <section class="selectionContainer">
+        <div class="selection">
+          <h2>Player selection</h2>
+          <p id="playerSelect"></p>
+        </div>
+        <div class="selection">
+          <h2>Computer Selection</h2>
+          <p id="computerSelect"></p>
+        </div>
+      </section>
+      <section class="resultContainer">
+        <p id="result"></p>
+      </section>
+      <section class="newGame">
+        <button class="newGameBtn">New game</button>
+      </section>
     </div>
-    <section class="rpsContainer">
-      <img src="img/rock.png" alt="rock" id="rock" />
-      <img src="img/paper.png" alt="paper" id="paper" />
-      <img src="img/scissors.png" alt="scissors" id="scissors" />
-    </section>
-    <section class="selectionContainer">
-      <div class="selection">
-        <h2>Player selection</h2>
-        <p id="playerSelect"></p>
-      </div>
-      <div class="selection">
-        <h2>Computer Selection</h2>
-        <p id="computerSelect"></p>
-      </div>
-    </section>
-    <section class="resultContainer">
-      <p id="result">result placeholder</p>
-    </section>
-    <section class="newGame">
-      <button id="newGameBtn">New game</button>
-    </section>
-    <footer class="footer">footer placeholder</footer>
+    <footer class="footer">
+      <p id="footerText">
+        Made with blood, sweat and tears by
+        <a href="https://github.com/aczanbouah/rockPaperScissors">Kelm</a>.
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
